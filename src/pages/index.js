@@ -5,10 +5,11 @@ import Layout from "../components/layout"
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi.</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+    </style> 
+    <h1>This is my website.</h1>
+    <p>And this is a paragraph that I will fill later with something cool and catchy ;).</p>
   </Layout>
 )
 
