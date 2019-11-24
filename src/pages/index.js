@@ -11,7 +11,7 @@ const Index = () => (
       @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
     </style> 
     <h1>Hi, I'm Jorge!</h1>
-    <p>I'm a Software Engineer working for Groupon. I'm living in San Francisco, CA and originally I'm from Santiago, Chile.</p>
+    <p>I'm a Software Engineer (Front-end) working for Groupon. I'm living in San Francisco, CA and originally I'm from Santiago, Chile.</p>
     <p>Currently I do JavaScript, HTML/CSS and all UI related things.</p>
     <p>I volunteer as a mentor for <a href="https://nodeschool.io/sanfrancisco/">NodeSchool San Francisco</a>.</p>
     <p>I like non-fiction reading, film photography and playing guitar.</p>
