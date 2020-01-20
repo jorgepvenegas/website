@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Jorge Venegas Carrasco`,
-    description: `Software Engineer, Frontend, located in San Francisco, CA.`,
-    author: `@jorgepvenegas`
+    description: `Senior Software Engineer, Frontend, living in San Francisco, CA.`,
+    author: `@jorgepvenegas`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-favicon`,
     `gatsby-transformer-sharp`,
@@ -24,9 +25,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-71489910-1",
-      }
-    }
+        trackingId: 'UA-71489910-1',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

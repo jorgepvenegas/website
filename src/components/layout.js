@@ -5,32 +5,16 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
-
-// import Header from "./header"
-import "./layout.css"
+import React from 'react'
+import PropTypes from 'prop-types'
+import Header from './header'
 
 const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+      <Header />
       <div id="layout">
         <main>{children}</main>
-        {/* <footer>
-          <a href="https://twitter.com/jorgepvenegas">@jorgepvenegas</a>
-        </footer> */}
       </div>
     </>
   )
