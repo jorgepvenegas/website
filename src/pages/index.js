@@ -48,23 +48,21 @@ const Index = () => (
         Goodreads
       </a>{' '}
       and{' '}
-      <s>
-        <a
-          target="_BLANK"
-          rel="noopener noreferrer"
-          title="I closed it"
-          href="https://www.instagram.com/jorgepvenegas">
-          Instagram
-        </a>
-      </s>
-      . An{' '}
+      <a
+        target="_BLANK"
+        rel="noopener noreferrer"
+        title="I reopened it!"
+        href="https://www.instagram.com/jorgepvenegas">
+        Instagram
+      </a>
+      .{' '}
       <a
         rel="noopener noreferrer"
         target="_BLANK"
         href="mailto:jorgepvenegas@gmail.com">
-        email
+        Email
       </a>{' '}
-      is always an option!
+      is an option, too.
     </p>
   </Layout>
 )
