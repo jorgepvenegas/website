@@ -1,46 +1,66 @@
 ---
-path: '/blog/frontend-interview-questions'
-date: '2020-03-08'
-title: 'A list of questions that Ive had during Front End interviews'
-excerpt: 'Front end engineer interview questions'
+path: '/blog/the-coalescing-operator'
+date: '2020-04-10'
+title: 'Implementing the new coalescing operator'
+excerpt: 'How to use coalescing operator to make your code more clean and readable'
 tags: ['article', 'blog']
 ---
 
-## A list of questions that I have had during Front End interviews
+# The nullish coalescing operator (??)
 
-Last year, after six years of work at Groupon, I decided to move on and change jobs. I spent a lot of time getting ready for technical interviews. The last time I had a job interview was back 2013, in a different country and a different level of experience. In this post I want to share what kind of questions I saw during the process.
+One of the new features of ES2020 is the implementantion of the new nullish coalescing operator. It's a logical operator which returns the right-hand side of the operation only when the left-hand side is either `null` or `undefined`. Oposite to the OR (`||`) operator, which evaluates as falsy values of empty strings or zero, for example.
 
-I interviewed in 18 places during 4 months. I gained experience along the way and honestly, I have to say that the best way to get ready for interviewing is just schedule phone calls do real practice. Even though I failed a lot of technical phone screens, the amount of experience I gained during the process makes everything worth it. 
+It's syntax is quite short and conscise:
 
-### Technical Interview questions
+```
+leftExpression ?? rightExpression
+```
 
-Some of the questions I saw during the process were:
+## Nullish coalescing compared to OR operator
 
-1. Do an implementation of Promise functionality (Promise API).
-2. Implement a Model (Backbone like / Ember like) from scratch.
-3. Implement a throttle function.
-4. Implement the JSON.parse() function.
-5. Implement a BST data structure.
-6. Get the median of two sorted arrays.
-7. Implement a string compression algorithm.
-8. Debug a ToDo list implementation.
-9. Implement a Publisher class.
-10. Create an Event class.
-11. Create a text validation function. Given a long string of words it will return true or false wether the content is safe or not when comparing against an array of words (blacklist).
-12. Filter words based on an array of objects.
-13. Implement a Deck class with shuffle and deal hand methods.
-14. Implement a search function for an HTML text input considering thousands of possible results (Trie).
+```javascript
+const text = '' || 'This is a string'
+// Will return 'This is a string'
 
+const number = 0 || 10
+// number will log 10
+```
 
-### Behavioral questions
+Now, if we try the same logical comparisons with `??`, the results are:
 
-1. Why are you interviewing with us.
-2. How would you approach a team conflict situation.
-3. If you have two important tasks to finish, how would you prioritize them and why.
+```javascript
+const text = '' ?? 'This is a string'
+// Will return ''
 
-### System design questions
+const number = 0 ?? 10
+```
 
-1. Design a parking lot system.
-2. Design a user interaction event tracker.
-3. Design an online chat application.
-4. Describe some system you've designed before.
+Consider the use of nullish coalescing operator when you want to narrow down to `null` and `undefined` comparisons, leaving any other JavaScript _falsy_ value behind. Depending on your codebase, it might help to mitigate some cryptic errors.
+
+Let's compare `??` to `||` in a practical example. We want to get the a player score and we know that zero is a valid value. If we want to use OR operator for this logical comparison, a value of zero would be considered falsy, returning the fallback value on the right side of the operation. Applying nullish coalescing operator fixes the issue in a simple and elegant way, with no need of extra checking.
+
+```javascript
+// Example with OR operator
+const player = { score: 0 }
+
+const getScore = ({ score }) => {
+  return score || 'Not assigned' // returns "Not asigned"
+}
+```
+
+The above example considers the value of `score` as falsy, returning `"Not assigned"` as a result.
+
+```javascript
+// Example with ?? operator
+const player = { score: 0 }
+
+const getScore = ({ score }) => {
+  return score ?? 'Not assigned' // returns 0
+}
+```
+
+The example with `??` operator considers 0 as a truthy value. For our use case, it is a valid output.
+
+## Conclusion
+
+The nullish coalescing logical operator `??` narrows down the comparison of falsy values only to `null` and `undefined` and it might help to prevent logical errors in your codebase. A `null` variable that hasn't been assigned or a `undefined` value that hasn't been declared are in fact situations where we don't have _something_ to compare. On the other hand, falsy JavaScript variable values like `NaN`, `0` and `''` are comparable values regardless of the validity nuances of each one of them.
