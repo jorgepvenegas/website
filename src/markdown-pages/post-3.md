@@ -1,6 +1,6 @@
 ---
 path: '/blog/the-coalescing-operator'
-date: '2020-03-08'
+date: '2020-04-10'
 title: 'Implementing the new coalescing operator'
 excerpt: 'How to use coalescing operator to make your code more clean and readable'
 tags: ['article', 'blog']
@@ -37,7 +37,7 @@ const number = 0 ?? 10
 
 Consider the use of nullish coalescing operator when you want to narrow down to `null` and `undefined` comparisons, leaving any other JavaScript _falsy_ value behind. Depending on your codebase, it might help to mitigate some cryptic errors.
 
-Consider the following example. We want to get the a player score and we know that zero is a valid value. If we want to use OR operator for this logical comparison, a value of zero would be considered falsy, returning the fallback value on the right side of the operation. Applying nullish coalescing operator fixes the issue in a simple and elegant way, with no need of extra checking.
+Let's compare `??` to `||` in a practical example. We want to get the a player score and we know that zero is a valid value. If we want to use OR operator for this logical comparison, a value of zero would be considered falsy, returning the fallback value on the right side of the operation. Applying nullish coalescing operator fixes the issue in a simple and elegant way, with no need of extra checking.
 
 ```javascript
 // Example with OR operator
