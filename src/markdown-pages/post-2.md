@@ -19,20 +19,22 @@ leftExpression ?? rightExpression
 ## Nullish coalescing compared to OR operator
 
 ```javascript
-const text = '' || 'This is a string'
-// Will return 'This is a string'
+const result = '' || 'This is a string';
+console.log(result);
+// This will log 'This is a string'
 
-const number = 0 || 10
-// number will log 10
+const number = 0 || 10;
+console.log(number);
+// This will log 10
 ```
 
 Now, if we try the same logical comparisons with `??`, the results are:
 
 ```javascript
-const text = '' ?? 'This is a string'
+const text = '' ?? 'This is a string';
 // Will return ''
 
-const number = 0 ?? 10
+const number = 0 ?? 10;
 // Will return 0
 ```
 
@@ -42,10 +44,10 @@ Let's compare `??` to `||` in a practical example. We want to get the a player s
 
 ```javascript
 // Example with OR operator
-const player = { score: 0 }
+const player = { score: 0 };
 
 const getScore = ({ score }) => {
-  return score || 'Not assigned' // returns "Not asigned"
+  return score || 'Not assigned'; // returns "Not asigned"
 }
 ```
 
@@ -53,10 +55,10 @@ The above example considers the value of `score` as falsy, returning `"Not assig
 
 ```javascript
 // Example with ?? operator
-const player = { score: 0 }
+const player = { score: 0 };
 
 const getScore = ({ score }) => {
-  return score ?? 'Not assigned' // returns 0
+  return score ?? 'Not assigned'; // returns 0
 }
 ```
 
