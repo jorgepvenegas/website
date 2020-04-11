@@ -3,7 +3,9 @@ body {
   background: #fff;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Crimson Text', serif;
 }
 
@@ -11,10 +13,12 @@ a {
   color: black;
 }
 
-p, ul, li {
+p,
+ul,
+li {
   font-family: 'Crimson Text', serif;
   line-height: 27px;
-  font-size: 17px;
+  font-size: 19px;
 }
 
 header ul {
@@ -39,4 +43,9 @@ ul.posts {
     list-style: none;
     padding: 0 0 1rem;
   }
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  font-size: 14px;
 }
