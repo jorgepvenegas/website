@@ -49,3 +49,8 @@ code[class*='language-'],
 pre[class*='language-'] {
   font-size: 14px;
 }
+
+// Fix backround for Prism default theme
+.token.operator {
+	background: none;
+}
