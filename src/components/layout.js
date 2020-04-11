@@ -8,6 +8,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Header from './header'
+import '../styles/style.scss'
 
 const Layout = ({ children }) => {
   return (

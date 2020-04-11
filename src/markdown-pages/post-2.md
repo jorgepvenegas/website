@@ -1,16 +1,16 @@
 ---
-path: '/blog/the-coalescing-operator'
+path: '/blog/the-nullish-coalescing-operator'
 date: '2020-04-10'
-title: 'Implementing the new coalescing operator'
-excerpt: 'How to use coalescing operator to make your code more clean and readable'
+title: 'Implementing the nullish coalescing operator'
+excerpt: 'How to use nullish coalescing operator to make your code more clean and readable'
 tags: ['article', 'blog']
 ---
 
 # The nullish coalescing operator (??)
 
-One of the new features of ES2020 is the implementantion of the new nullish coalescing operator. It's a logical operator which returns the right-hand side of the operation only when the left-hand side is either `null` or `undefined`. Oposite to the OR (`||`) operator, which evaluates as falsy values of empty strings or zero, for example.
+One of the new features of ES2020 is the implementation of the new nullish coalescing operator. It's a logical operator which returns the right-hand side of the operation only when the left-hand side is either `null` or `undefined`. Oposite to the OR (`||`) operator, which evaluates as falsy values of empty strings or zero, for example.
 
-It's syntax is quite short and conscise:
+Its syntax is quite short and conscise:
 
 ```
 leftExpression ?? rightExpression
@@ -33,6 +33,7 @@ const text = '' ?? 'This is a string'
 // Will return ''
 
 const number = 0 ?? 10
+// Will return 0
 ```
 
 Consider the use of nullish coalescing operator when you want to narrow down to `null` and `undefined` comparisons, leaving any other JavaScript _falsy_ value behind. Depending on your codebase, it might help to mitigate some cryptic errors.
@@ -63,4 +64,4 @@ The example with `??` operator considers 0 as a truthy value. For our use case, 
 
 ## Conclusion
 
-The nullish coalescing logical operator `??` narrows down the comparison of falsy values only to `null` and `undefined` and it might help to prevent logical errors in your codebase. A `null` variable that hasn't been assigned or a `undefined` value that hasn't been declared are in fact situations where we don't have _something_ to compare. On the other hand, falsy JavaScript variable values like `NaN`, `0` and `''` are comparable values regardless of the validity nuances of each one of them.
+The nullish coalescing logical operator `??` narrows down the comparison of falsy values only to `null` and `undefined` and it might help to prevent logical errors in your codebase. A `null` variable that hasn't been assigned or an `undefined` value that hasn't been declared are in fact situations where we don't have _something_ to compare. On the other hand, falsy JavaScript variable values like `NaN`, `0` and `''` are comparable values regardless of the validity nuances of each one of them.
