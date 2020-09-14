@@ -61,7 +61,7 @@ const Index = () => (
         href="mailto:jorgepvenegas@gmail.com">
         Email
       </a>{' '}
-      is an option, too.
+      is an option too.
     </p>
   </Layout>
 )
