@@ -10,6 +10,8 @@ tags: ['article', 'blog', 'coding-interviews']
 
 Throttling and debouncing functions are a simple method to delay the action of a behavior. You can think of a throttle as a function that will perform an action only once every certain amount of time. Debounce on the other side will perform an action only once if the time elapsed from the invocation has passed.
 
+Try this example [here](https://codesandbox.io/s/throttle-and-debounce-c6ggf?file=/src/index.js).
+
 ## What's the purpose of throttle and debounce?
 
 Think of any action that might represent an expensive, costly task for your application and you want to limit or delay based on a determined amount of time. A good example is the use case of an autocomplete text input when the autocomplete _needs_ to make an API call using the current input value that's being updated on every keystroke.
@@ -31,9 +33,9 @@ const greeter = () => {
 }
 
 const throttle = (fn, ms) => {
-  return () => {
+  return (param) => {
     setTimeout(() => {
-      fn();
+      fn(param);
     }, ms);
   }
 }
@@ -52,9 +54,9 @@ At this point the `throttle` function is only delaying the execution of `fn` by 
 ```javascript
 const throttle = (fn, ms) => {
   let timerId = undefined;
-  return () => {
+  return (param) => {
     timerId = setTimeout(() => {
-      fn();
+      fn(param);
     }, ms);
   }
 }
@@ -65,10 +67,10 @@ Now we can determine if `timerId` is defined or not when an instance of `throttl
 ```javascript
 const throttle = (fn, ms) => {
   let timerId = undefined;
-  return () => {
+  return (param) => {
     if (timerId === undefined) {
       timerId = setTimeout(() => {
-        fn();
+        fn(param);
       }, ms)
     }
   }
@@ -82,10 +84,10 @@ Our code now is delaying the given `fn` but `timerId` remains defined. In order 
 ```javascript
 const throttle = (fn, ms) => {
   let timerId = undefined;
-  return () => {
+  return (param) => {
     if (timerId === undefined) {
       timerId = setTimeout(() => {
-        fn();
+        fn(param);
         timerId = undefined;
       }, ms)
     }
@@ -109,9 +111,9 @@ The starting code looks almost the same. An instance of `debounce` will hold a r
 ```javascript
 const debounce = (fn, ms) => {
   let timerId = undefined;
-  return () => {
+  return (param) => {
     timerId = setTimeout(() => {
-      fn();
+      fn(param);
     }, ms);
   }
 }
@@ -124,10 +126,10 @@ Now we need to tell our code that on subsequent calls this timer reference must 
 ```javascript
 const debounce = (fn, ms) => {
   let timerId = undefined;
-  return () => {
+  return (param) => {
     clearTimeout(timerId); // Here is the magic
     timerId = setTimeout(() => {
-      fn();
+      fn(param);
     }, ms);
   }
 }
