@@ -7,7 +7,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-favicon`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -18,8 +17,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/favicon.png`, // This path is relative to the root of the site.
+        display: `minimal-ui`, // This path is relative to the root of the site.
       },
     },
     {
