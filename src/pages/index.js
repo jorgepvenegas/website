@@ -38,30 +38,15 @@ const Index = () => (
         target="_BLANK"
         href="https://github.com/jorgepvenegas">
         Github
-      </a>
-      ,{' '}
-      <a
-        target="_BLANK"
-        rel="noopener noreferrer"
-        href="https://www.goodreads.com/user/show/7860083-jorge">
-        Goodreads
       </a>{' '}
       and{' '}
       <a
         target="_BLANK"
         rel="noopener noreferrer"
-        title="I reopened it!"
-        href="https://www.instagram.com/jorgepvenegas">
-        Instagram
+        href="https://www.goodreads.com/user/show/7860083-jorge">
+        Goodreads
       </a>
-      .{' '}
-      <a
-        rel="noopener noreferrer"
-        target="_BLANK"
-        href="mailto:jorgepvenegas@gmail.com">
-        Email
-      </a>{' '}
-      is an option too.
+      .
     </p>
   </Layout>
 )

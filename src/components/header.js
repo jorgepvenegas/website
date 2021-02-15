@@ -10,6 +10,13 @@ const Header = () => (
       <li>
         <Link to="/blog/">Blog</Link>
       </li>
+      <li>
+        <a
+          target="BLANK"
+          href="https://github.com/jorgepvenegas/website/raw/master/public/Jorge%20Venegas%20-%20Resume.pdf">
+          Resume
+        </a>
+      </li>
     </ul>
   </header>
 )
