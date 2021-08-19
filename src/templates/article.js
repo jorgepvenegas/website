@@ -31,7 +31,7 @@ export const query = graphql`
     markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
       html
       frontmatter {
-        date
+        date(formatString: "MMM Do, yyyy")
         excerpt
       }
     }
