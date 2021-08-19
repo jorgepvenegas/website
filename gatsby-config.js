@@ -3,6 +3,7 @@ module.exports = {
     title: `Jorge Venegas Carrasco`,
     description: `Senior Software Engineer, Frontend, living in San Francisco, CA.`,
     author: `@jorgepvenegas`,
+    siteUrl: `https://jorgepvenegas.com`,
   },
   plugins: [
     'gatsby-plugin-sass',
