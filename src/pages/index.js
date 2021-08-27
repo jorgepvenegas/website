@@ -7,7 +7,15 @@ const Index = () => (
     <SEO title="Home" />
     <h1>Hi, I'm Jorge!</h1>
     <p>
-      I'm doing Software Engineering at <a target="_BLANK" rel="noopener noreferrer" href="https://www.upstart.com" >Upstart</a>. Currently based in San Francisco, CA and originally I'm from Santiago, Chile.
+      I'm doing Software Engineering at{' '}
+      <a
+        target="_BLANK"
+        rel="noopener noreferrer"
+        href="https://www.upstart.com">
+        Upstart
+      </a>
+      . Currently based in San Francisco, CA and originally I'm from Santiago,
+      Chile.
     </p>
     <p>
       I volunteer as a mentor for{' '}
