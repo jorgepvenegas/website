@@ -16,9 +16,7 @@ const BlogPage = ({ data }) => {
             <li key={frontmatter.path}>
               <Link to={frontmatter.path}>{frontmatter.title}</Link>
               <br />
-              <small>
-                {frontmatter.excerpt} - {frontmatter.date}
-              </small>
+              <small>{frontmatter.date}</small>
             </li>
           )
         })}

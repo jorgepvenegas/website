@@ -1,7 +1,7 @@
 ---
 path: '/blog/frontend-interview-questions'
 date: '2020-03-08'
-title: 'A list of questions that Ive had during Front End interviews'
+title: A list of questions that I've had during Front End interviews
 excerpt: 'Front end engineer interview questions'
 tags: ['article', 'blog']
 ---

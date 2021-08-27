@@ -15,7 +15,7 @@ const Article = ({
       <div className="blog-post-container">
         <div className="blog-post">
           <small>{date}</small>
-          <p>{excerpt}</p>
+          <p className="excerpt">{excerpt}</p>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -27,7 +27,7 @@ const Article = ({
 }
 
 export const query = graphql`
-  query($pathSlug: String!) {
+  query ($pathSlug: String!) {
     markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
       html
       frontmatter {
