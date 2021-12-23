@@ -1,6 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
+
+const CharacterData = () => {
+  const [data, setData] = useState('')
+
+  const handleClick = async () => {
+    const response = await fetch('/.netlify/functions/swapi')
+    const data = await response.json()
+    setData(data)
+  }
+
+  return (
+    <>
+      <h3>Here is the output</h3>
+      <button onClick={handleClick}>Fetch</button>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </>
+  )
+}
 
 const Index = () => (
   <Layout>
@@ -54,6 +72,7 @@ const Index = () => (
       </a>
       .
     </p>
+    <CharacterData />
   </Layout>
 )
 
