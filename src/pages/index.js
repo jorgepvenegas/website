@@ -25,7 +25,7 @@ const Index = () => (
     <SEO title="Home" />
     <h1>Hi, I'm Jorge!</h1>
     <p>
-      I'm doing Software Engineering at{' '}
+      I'm a Senior Software Engineer at{' '}
       <a
         target="_BLANK"
         rel="noopener noreferrer"
@@ -35,12 +35,7 @@ const Index = () => (
       . Currently based in San Francisco, CA and originally I'm from Santiago,
       Chile.
     </p>
-    <p>
-      I volunteer as a mentor for{' '}
-      <a href="https://nodeschool.io/sanfrancisco/">NodeSchool San Francisco</a>
-      .
-    </p>
-    <p>Guitar, nonfiction, and film photography enthusiast.</p>
+    <p>Guitar, nonfiction, and photography enthusiast.</p>
     <p>
       You can find me on{' '}
       <a
