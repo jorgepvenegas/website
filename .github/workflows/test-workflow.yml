@@ -1,0 +1,13 @@
+name: test-runner-action
+run-name: ${{github.actor}} is triggering a GH Action
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm run install -g bats
+      - run: bats -v
