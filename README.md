@@ -1,2 +1,4 @@
-Codebase for [jorgepvenegas.com](https://jorgepvenegas.com).
-Built on Gatsby.
+
+
+
+For a some time it was the codebase for [jorgepvenegas.com](https://jorgepvenegas.com).
